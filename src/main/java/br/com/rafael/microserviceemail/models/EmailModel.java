@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @Entity
@@ -12,7 +13,7 @@ import java.time.LocalDateTime;
 public class EmailModel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String emailId;
+    private UUID emailId;
     private String ownerRef;
     private String emailFrom;
     private String emailTo;
